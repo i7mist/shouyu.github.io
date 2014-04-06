@@ -78,7 +78,7 @@ function nextQuestion(){
 function A(){
 	if(decided)	return;
 	decided = true;		
-	if(answer == 'A'){
+	if(answer.indexOf('A') != -1){
 		document.getElementById("result").innerHTML = "Accepted";
 		document.getElementById("result").style.color = "#0000FF";
 		feedback[cnt-1] = 1;
@@ -99,7 +99,7 @@ function A(){
 function B(){
 	if(decided)	return;
 	decided = true;
-	if(answer == 'B'){
+	if(answer.indexOf('B') != -1){
 		document.getElementById("result").innerHTML = "Accepted";
 		document.getElementById("result").style.color = "#0000FF";	
 		feedback[cnt-1] = 1;
