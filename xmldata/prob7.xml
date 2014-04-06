@@ -1,14 +1,13 @@
-﻿<?xml version="1.0" encoding="gb2312"?>
-<info>
-<question>和听障人士进行当面交流时，是否一定要打手语？</question>
+<?xml version="1.0" encoding="gb2312"?>
+<info><question>
+和听障人士进行当面交流时，是否一定要打手语？
+</question>
 <option>
 一定
 </option>
 <option>
 不一定
 </option>
-<explanation>
-带了助听器优先选择说话，其他还有手机短信、写纸条等
-</explanation>
-<answer>B</answer>
-</info>
+<answer>
+B
+</answer><explanation></explanation></info>

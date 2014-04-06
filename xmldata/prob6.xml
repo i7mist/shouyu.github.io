@@ -1,14 +1,13 @@
-﻿<?xml version="1.0" encoding="gb2312"?>
-<info>
-<question>手语就是手势语吗？</question>
+<?xml version="1.0" encoding="gb2312"?>
+<info><question>
+手语就是手势语吗？
+</question>
 <option>
 是
 </option>
 <option>
 不是
 </option>
-<explanation>
-手语包括手势语和手指语
-</explanation>
-<answer>B</answer>
-</info>
+<answer>
+B
+</answer><explanation></explanation></info>

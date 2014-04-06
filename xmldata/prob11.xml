@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="gb2312"?>
-<info>
-<question>世界上第一只会使用美国手语的动物是？ </question>
+<?xml version="1.0" encoding="gb2312"?>
+<info><question>
+（西餐）这个词是一下哪个？
+</question>
 <option>
-华秀（Washoe）
+西餐
 </option>
 <option>
-可可（Koko）
+中餐
 </option>
-<explanation>
-</explanation>
-<answer>B</answer>
-</info>
+<answer>
+A
+</answer><explanation></explanation></info>

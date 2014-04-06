@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="gb2312"?>
-<info>
-<question>聋人佩戴助听器是否一定能听到声音？</question>
+<?xml version="1.0" encoding="gb2312"?>
+<info><question>
+聋人佩戴助听器是否一定能听到声音？
+</question>
 <option>
-一定
+是
 </option>
 <option>
-不一定
+不是
 </option>
-<explanation>
-</explanation>
-<answer>B</answer>
-</info>
+<answer>
+B
+</answer><explanation></explanation></info>

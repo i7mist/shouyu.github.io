@@ -1,14 +1,13 @@
-﻿<?xml version="1.0" encoding="gb2312"?>
-<info>
-<question>后天的听力丧失有可能是因为遗传吗？</question>
+<?xml version="1.0" encoding="gb2312"?>
+<info><question>
+目前中国聋人大学只有有限的几个专业，下面哪个专业是属于这几个专业之一的？
+</question>
 <option>
-有
+艺术设计专业
 </option>
 <option>
-没有
+企业管理
 </option>
-<explanation>
-迟发症
-</explanation>
-<answer>A</answer>
-</info>
+<answer>
+A
+</answer><explanation></explanation></info>
