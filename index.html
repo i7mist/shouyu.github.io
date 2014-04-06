@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>“集中声智”</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+	<!-- Some basic function implemented for a quiz system -->
+	<script src = "basicfunction.js"></script>
+	<script src="tabs.js"></script>
+	
+  </head>
+
+  <body onLoad="nextQuestion()">
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li id = "tagQuiz" class="active"><a onclick= "loadQuizUI()" href="#">答题</a></li>
+          <li id = "tagRec"><a onclick = "loadRecUI()" href="#">记录</a></li>
+		  <li id = "tagIntro"><a onclick = "loadIntroUI()" href="#">“集中声智”</a></li>
+        </ul>
+		<span>
+        <h3 class = "text-muted">集中声智 --- 在线试答</h3>
+		</span>
+      </div>
+
+      <div id="main" class="jumbotron">
+        <p id = "text" class="lead"></p>
+        <p>
+			<button class="btn-sm btn-success" onClick="nextQuestion()">   Next   </button>
+			<button id = "optionA" class="btn-sm btn-default" onClick="A()">  A  </button>
+			<button id = "optionB" class="btn-sm btn-default" onClick="B()">  B  </button>
+		</p>
+		<p>
+			<div id = "result"></div>
+		</p>
+      </div>
+
+      <div class="footer">
+        <p>2014“看见你的声音” 北京大学-清华大学手语文化节</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.js"></script>
+  </body>
+</html>
