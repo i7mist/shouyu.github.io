@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="gb2312"?>
+﻿<?xml version="1.0" encoding="gb2312"?>
 <info>
-<question>���˷򸾵ĺ���һ����������</question>
+<question>聋人夫妇的孩子一定是聋人吗？</question>
 <option>
-��һ��
+不一定
 </option>
 <option>
-һ��
+一定
 </option>
 <explanation>
-�����������Ƿ�һ��
+看致聋基因是否一致
 </explanation>
 <answer>A</answer>
 </info>
