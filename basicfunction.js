@@ -1,6 +1,8 @@
 var question,optionA,optionB,answer;
 var decided = true,cnt = 0,finish = false;
-var history = "" , feedback = "";
+var MaxId = 10;
+var history = new Array(MaxId) , feedback = new Array(MaxId);
+
 function loadXMLDoc(dname){
 	try{
 		xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
@@ -30,12 +32,18 @@ function loadXMLDoc(dname){
 function rand(num){
 	return Math.floor(Math.random()*(num+1)-0.001);
 }
+function findpid(pid){
+	for(var i = 0 ; i < cnt ; ++i){
+		if(history[i] == pid)	return i;
+	}
+	return -1;
+}
 function getPid(){
 	var pid;
 	while(1){
-		pid = rand(5);
-		if(history.indexOf(String(pid)) < 0){
-			history += String(pid);
+		pid = rand(MaxId);
+		if(findpid(pid) < 0){
+			history[cnt] = pid;
 			cnt++;
 			break;
 		}
@@ -44,7 +52,7 @@ function getPid(){
 }
 
 function loadQuestion(pid){
-	var path = "xmldata/p" + pid + ".xml";
+	var path = "xmldata/prob" + pid + ".xml";
 	var xmlDoc = loadXMLDoc(path);
 	question = xmlDoc.getElementsByTagName("question")[0].childNodes[0].nodeValue;
 	optionA = xmlDoc.getElementsByTagName("option")[0].childNodes[0].nodeValue;
@@ -55,7 +63,6 @@ function loadQuestion(pid){
 function nextQuestion(){
 	if(!decided){
 		cnt --;
-		history = history.substring(0,history.length-1);
 	}
 	var pid = getPid();
 	if(pid < 0)	return;
@@ -74,14 +81,14 @@ function A(){
 	if(answer == 'A'){
 		document.getElementById("result").innerHTML = "Accepted";
 		document.getElementById("result").style.color = "#0000FF";
-		feedback += String(1);
+		feedback[cnt-1] = 1;
 	}	
 	else{
 		document.getElementById("result").innerHTML = "Wrong Answer";
 		document.getElementById("result").style.color = "#FF2100";
-		feedback += String(0);
+		feedback[cnt-1] = 0;
 	}	
-	if(cnt > 5){
+	if(cnt > MaxId){
 		alert("题库已爆☆ω☆");
 		 var mainDoc = document.getElementById("main");
 		 finish = true;
@@ -95,14 +102,14 @@ function B(){
 	if(answer == 'B'){
 		document.getElementById("result").innerHTML = "Accepted";
 		document.getElementById("result").style.color = "#0000FF";	
-		feedback += String(1);
+		feedback[cnt-1] = 1;
 	}	
 	else{
 		document.getElementById("result").innerHTML = "Wrong Answer";
 		document.getElementById("result").style.color = "#FF2100";
-		feedback += String(0);
+		feedback[cnt-1] = 0;
 	}
-	if(cnt > 5){
+	if(cnt > MaxId){
 		alert("题库已爆☆ω☆");
 		 var mainDoc = document.getElementById("main");
 		 mainDoc.innerHTML = "<button class = \"btn-lg btn-success\" onClick=\"again()\">   再做一遍：） </button>"
@@ -116,6 +123,5 @@ function again(){
 		 cnt = 0;
 		 decided = true;
 		 finish = false;
-		 history = feedback = "";
 		 loadQuizUI();
 }

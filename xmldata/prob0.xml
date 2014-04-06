@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="gb2312"?>
 <info>
-<question>以下哪项活动不是手语分社的常规活动？</question>
+<question>聋人夫妇的孩子一定是聋人吗？</question>
 <option>
-对外教学
+不一定
 </option>
 <option>
-手语班
+一定
 </option>
+<explanation>
+看致聋基因是否一致
+</explanation>
 <answer>A</answer>
 </info>

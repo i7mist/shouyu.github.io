@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="gb2312"?>
 <info>
-<question>聋人可以考托福吗</question>
+<question>手语有地域差异吗？</question>
 <option>
-可以
+有
 </option>
 <option>
-不可以
+没有
 </option>
+<explanation>
+</explanation>
 <answer>A</answer>
 </info>

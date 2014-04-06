@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="gb2312"?>
 <info>
-<question>以下哪项活动不是手语分社的常规活动？</question>
+<question>在用手语交流的时候，需要表情来配合表达吗？ </question>
 <option>
-对外教学
+需要
 </option>
 <option>
-手语班
+不需要
 </option>
+<explanation>
+</explanation>
 <answer>A</answer>
 </info>
