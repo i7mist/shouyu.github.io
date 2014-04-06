@@ -40,7 +40,7 @@ function loadRecUI(){
 		str +="<tr>"  + 
 							"<td>" + i + "</td>" +
 							"<td>" + question + "</td>" + 
-							"<td>" + ((answer == 'A')? optionA : optionB) + "</td>";
+							"<td>" + ((answer.indexOf('A') != -1)? optionA : optionB) + "</td>";
 							
 		if(feedback[i] == 1){
 			str += "<td> <span style = \"color:#0000FF\"> Accepted </span> </td>";
