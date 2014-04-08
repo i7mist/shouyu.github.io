@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="gb2312"?>
+﻿<?xml version="1.0" encoding="gb2312"?>
 <info><question>
-以下哪个地点可以用来学习
+在图书馆的阅览室可以用手语交谈吗？
 </question>
 <option>
-（手语）图书馆
+可以
 </option>
 <option>
-博雅塔
+不可以
 </option>
 <answer>
 A

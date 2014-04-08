@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="gb2312"?>
+﻿<?xml version="1.0" encoding="gb2312"?>
 <info><question>
-以下哪个是有馅的？
+在手语中，可以同时用右手和左手分别打两个词吗？
 </question>
 <option>
-（手语）包子
+可以
 </option>
 <option>
-面条
+不可以
 </option>
 <answer>
-A
+B
 </answer><explanation></explanation></info>

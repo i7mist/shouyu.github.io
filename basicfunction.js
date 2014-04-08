@@ -1,6 +1,6 @@
 ﻿var question,optionA,optionB,answer;
 var decided = true,cnt = 0,finish = false;
-var MaxId = 106;
+var MaxId = 60;
 var history = new Array(MaxId) , feedback = new Array(MaxId);
 
 function loadXMLDoc(dname){
