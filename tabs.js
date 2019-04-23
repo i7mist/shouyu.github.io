@@ -30,13 +30,13 @@ function loadRecUI(){
 	document.getElementById("tagIntro").className = "";
 	var mainDoc = document.getElementById("main");
 	mainDoc.className = "jumbotron";
-	var str = "<table id = \"recTab\" class = \"h5 table table-hover\">" + 
+	var str = "<p><table id = \"recTab\" class = \"h5 table table-hover\">" +
 			"<th>编号</th>" + 
 			"<th>题目</th>" +
 			"<th>答案</th>" +
 			"<th>记录</th>";
 	for(var i = 0 ; i < recsize ; ++i){;
-		loadQuestion(history[i]);
+		loadQuestion(questionHistory[i]);
 		str +="<tr>"  + 
 							"<td>" + i + "</td>" +
 							"<td>" + question + "</td>" + 
@@ -50,7 +50,7 @@ function loadRecUI(){
 		}
 		str += "</tr>";
 	}
-	str += "</table>";
+	str += "</table><button id = \"clearFeedback\" class=\"btn-sm btn-default\" onClick=\"again()\">  清除记录  </button><\p>";
 	mainDoc.innerHTML = str;
 }
 
@@ -58,7 +58,7 @@ function loadIntroUI(){
 	/*
 	if(!decided){
 		cnt --;
-		history = history.substring(0,history.length-1);
+		questionHistory = questionHistory.substring(0,questionHistory.length-1);
 	}*/
 	document.getElementById("tagQuiz").className = "";
 	document.getElementById("tagRec").className = "";

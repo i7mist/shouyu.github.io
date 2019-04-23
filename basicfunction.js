@@ -1,7 +1,7 @@
 ﻿var question,optionA,optionB,answer;
 var decided = true,cnt = 0,finish = false;
 var MaxId = 60;
-var history = new Array(MaxId) , feedback = new Array(MaxId);
+var questionHistory = new Array(MaxId) , feedback = new Array(MaxId);
 
 function loadXMLDoc(dname){
 	try{
@@ -34,7 +34,7 @@ function rand(num){
 }
 function findpid(pid){
 	for(var i = 0 ; i < cnt ; ++i){
-		if(history[i] == pid)	return i;
+		if(questionHistory[i] == pid)	return i;
 	}
 	return -1;
 }
@@ -43,7 +43,7 @@ function getPid(){
 	while(1){
 		pid = rand(MaxId);
 		if(findpid(pid) < 0){
-			history[cnt] = pid;
+			questionHistory[cnt] = pid;
 			cnt++;
 			break;
 		}
@@ -58,6 +58,26 @@ function loadQuestion(pid){
 	optionA = xmlDoc.getElementsByTagName("option")[0].childNodes[0].nodeValue;
 	optionB = xmlDoc.getElementsByTagName("option")[1].childNodes[0].nodeValue;
 	answer = xmlDoc.getElementsByTagName("answer")[0].childNodes[0].nodeValue;
+}
+
+function bodyOnLoad() {
+	if (localStorage.getItem("questionHistory") !== null) {
+		questionHistory = JSON.parse(localStorage.getItem("questionHistory"));
+	}
+	if (localStorage.getItem("feedback") !== null) {
+		feedback = JSON.parse(localStorage.getItem("feedback"));
+	}
+	if (localStorage.getItem("cnt") !== null){
+		cnt = JSON.parse(localStorage.getItem("cnt"));
+	}
+	save();
+	nextQuestion();
+}
+
+function save() {
+	localStorage.setItem("questionHistory", JSON.stringify(questionHistory));
+	localStorage.setItem("feedback", JSON.stringify(feedback));
+	localStorage.setItem("cnt", JSON.stringify(cnt));
 }
 
 function nextQuestion(){
@@ -87,7 +107,8 @@ function A(){
 		document.getElementById("result").innerHTML = "Wrong Answer";
 		document.getElementById("result").style.color = "#FF2100";
 		feedback[cnt-1] = 0;
-	}	
+	}
+	save();
 	if(cnt > MaxId){
 		alert("题库已爆☆ω☆");
 		 var mainDoc = document.getElementById("main");
@@ -109,6 +130,7 @@ function B(){
 		document.getElementById("result").style.color = "#FF2100";
 		feedback[cnt-1] = 0;
 	}
+	save();
 	if(cnt > MaxId){
 		alert("题库已爆☆ω☆");
 		 var mainDoc = document.getElementById("main");
@@ -120,8 +142,9 @@ function test(){
 	alert("hehehehe");	
 }
 function again(){
-		 cnt = 0;
-		 decided = true;
-		 finish = false;
-		 loadQuizUI();
+	cnt = 0;
+	save();
+	decided = true;
+	finish = false;
+	loadQuizUI();
 }
